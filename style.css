@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+
+:root{
+--primary-color:white;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding:0px;
+}
+
+body{
+    
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    background-image: url("bg-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+main{
+    transition:ease-out 0.9s;
+    
+}
+header{
+    background-color:#1A1A1D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    opacity: 0.7;
+}
+
+header .logo {
+flex-grow: 3;
+font-family: 'Potta One', cursive;
+font-size: 2em;
+color:var(--primary-color);
+}
+
+/*Navigation Bar*/
+
+nav{
+    flex-grow: 2;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    }
+
+nav ul li{
+    padding-left: 10px;
+}
+
+
+nav ul a{
+    text-decoration: none;
+    color:var(--primary-color);
+    font-size: 1.5em;
+    cursor: pointer;;
+    
+}
+
+nav ul a:hover{
+    border-bottom: 5px solid white;
+    transition:ease-in 0.3s;
+}
+
+/*Content*/
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items:center;
+    height:auto;
+}
+
+.header h1{
+color: var(--primary-color);
+font-size: 5em;
+font-family:'Potta One', cursive ;
+margin-top:10px ;
+animation: header-animation;
+animation-duration: 3s;
+}
+
+@keyframes header-animation{
+    0%{font-size: 0px;}
+}
+
+.paragraph{
+    font-size: 2em;
+    text-align: center;
+    color: var(--primary-color);
+    width: 700px;
+    margin-top:10px ;}
+
+.btn{
+    background-color: dodgerblue;
+    border: none;
+    width: 20%;
+    font-size: 1.5em;
+    padding: 10px;
+    margin-top: 30px;
+    color: var(--primary-color);
+}
+
+hr{
+    color: var(--primary-color);
+    width: 80%;
+    margin: 30px auto;
+    animation: myanimation;
+    animation-duration: 2s;
+}
+
+@keyframes myanimation{
+    0% {width: 0;}
+    100%{width:80%;}
+}
+
+
+/*Cards*/
+.language-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.language-container h1{
+    color: var(--primary-color);
+    font-family: monospace;
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+.card-container{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    height: auto;
+    flex-wrap: wrap;
+}
+
+.cards{
+    background-color: var(--primary-color);
+    border-radius: 3px;
+    width: 170px;
+    height: 170px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    transition: ease-in 0.1s;
+    animation: card-animation;
+    animation-duration: 2s;
+}
+
+@keyframes card-animation{
+    0%{border-radius: 50%;}
+    
+}
+
+.cards:hover{
+    background-color: khaki;
+    transform: skew(-10deg);
+    transition: transform ease-in 0.9s;
+}
+
+progress{
+    width: 100px;
+    background-color: white;
+    margin-top: 10px;
+}
+
+footer{
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background-color: #1A1A1D;
+    opacity: 0.6;
+    padding: 20px;
+    height: auto;
+    margin-bottom: 0;
+}
+
+.top{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: red;
+    bottom:50px;
+    right: 50px;
+    border-radius: 50%;
+    text-align: center;
+   
+}
+
+.top a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px;
+}
+
+@media only screen and (max-width:900px){
+
+    body{
+        background-image: url("bg-image.jpg");
+        margin-bottom: 0;
+    }
+    header{
+        
+        flex-direction: column;
+        height: auto;
+    }
+.header h1{
+color: var(--primary-color);
+font-size: 5em;
+font-family:'Potta One', cursive ;
+margin-top:10px ;
+animation: header-animation;
+animation-duration: 3s;
+text-align: center;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+nav ul li{
+    padding-top: 20px;
+}
+}
